@@ -26,7 +26,7 @@ async function getAuthToken() {
 async function getSpreadSheetValues({ spreadsheetId, sheetName }) {
   try {
     const auth = await getAuthToken();
-    const response = await sheets.spreadsheets.values.get({
+    const response = sheets.spreadsheets.values.get({
       spreadsheetId,
       range: sheetName,
       auth,
